@@ -2,11 +2,21 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Message from './components/message/message.js';
+import ContainerForMessages from './components/ContainerForMessages/ContainerForMessages.js';
 
 function App() {
   return (
     <div className="App">
-      <Message text="Привет" className="message"/>
+      <ContainerForMessages messages={
+        [
+          {
+            text: 'blabla'
+          },
+          {
+            text: 'Hi'
+          }
+        ]
+      } />
     </div>
   );
 }
