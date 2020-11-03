@@ -1,8 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Message from './components/message/message.js';
 import ContainerForMessages from './components/ContainerForMessages/ContainerForMessages.js';
+import Input from './components/Input/Input';
 
 function App() {
   return (
@@ -17,6 +16,7 @@ function App() {
           }
         ]
       } />
+      <Input />
     </div>
   );
 }

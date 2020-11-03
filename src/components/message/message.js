@@ -1,6 +1,7 @@
 import React from 'react';
 import './message.css';
 import Avatar from '../Avatar/Avatar.js';
+import PropTypes from 'prop-types';
 
 function Message(props) {
   return (
@@ -12,3 +13,7 @@ function Message(props) {
 }
 
 export default Message;
+
+Message.propTypes = {
+  text: PropTypes.string
+}

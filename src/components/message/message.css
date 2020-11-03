@@ -1,3 +1,9 @@
 .message {
-  color: red;
+  color: black;
+  min-width: 50px;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  border: 1px solid black;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 100px;
 }

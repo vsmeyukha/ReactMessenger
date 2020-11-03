@@ -1,5 +1,6 @@
 import React from 'react';
-import Message from '../message/message.js';
+import Message from '../Message/Message.js';
+import PropTypes from 'prop-types';
 
 export default function ContainerForMessages(props) {
   const { messages = [] } = props;
@@ -9,4 +10,8 @@ export default function ContainerForMessages(props) {
       {messages.map((item, key) => <Message text={item.text} key={key} />) }
     </div>
   );
+}
+
+ContainerForMessages.propTypes = {
+  messages: PropTypes.array
 }
