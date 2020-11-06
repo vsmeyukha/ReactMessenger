@@ -6,6 +6,7 @@ export default class Input extends React.Component {
 
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       content: ''
     };
@@ -15,6 +16,7 @@ export default class Input extends React.Component {
 
   handleSubmit() {
     console.log(this.state.content);
+    this.props.sendMessage({ text: this.state.content, user: 'blabla' });
   }
 
   handleChange(evt) {
@@ -33,5 +35,5 @@ export default class Input extends React.Component {
 }
 
 Input.propTypes = {
-  src: PropTypes.string
+  sendMessage: PropTypes.function
 }

@@ -7,7 +7,7 @@ export default function ContainerForMessages(props) {
 
   return (
     <div>
-      {messages.map((item, key) => <Message text={item.text} key={key} />) }
+      {messages.map((item, key) => <Message text={item.text} user={item.user} key={key} />) }
     </div>
   );
 }
