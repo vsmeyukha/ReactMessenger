@@ -17,4 +17,4 @@ export default Message;
 Message.propTypes = {
   text: PropTypes.string,
   user: PropTypes.string
-}
+};

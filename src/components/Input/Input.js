@@ -12,6 +12,7 @@ export default class Input extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleEnterClick = this.handleEnterClick.bind(this);
   }
 
   handleSubmit() {
@@ -19,15 +20,23 @@ export default class Input extends React.Component {
     this.props.sendMessage({ text: this.state.content, user: 'blabla' });
   }
 
+  handleEnterClick(evt) {
+    if (evt.key === 'Enter') {
+      this.handleSubmit();
+      console.log(evt.key);
+    }
+  }
+  
+
   handleChange(evt) {
     const content = evt.target.value;
-    this.setState({ content })
+    this.setState({ content });
   }
 
   render() {
     return (
       <div>
-        <input value={this.state.content} onChange={this.handleChange} ></input>
+        <input value={this.state.content} onChange={this.handleChange} onKeyDown={this.handleEnterClick} ></input>
         <SendButton handleSubmit={this.handleSubmit} />
       </div>
     );
@@ -35,5 +44,5 @@ export default class Input extends React.Component {
 }
 
 Input.propTypes = {
-  sendMessage: PropTypes.function
-}
+  sendMessage: PropTypes.func
+};

@@ -9,10 +9,10 @@ class App extends React.Component {
     this.state = {
       messages: []
     };
-    this.sendMesssage = this.sendMesssage.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
   }
 
-  sendMesssage({ text, user }) {
+  sendMessage({ text, user }) {
     const newMessages = this.state.messages;
     newMessages.push({ text, user });
     this.setState(newMessages);
@@ -23,7 +23,7 @@ class App extends React.Component {
     return(
       <div className="App">
         <ContainerForMessages messages={this.state.messages} />
-        <Input sendMessage={this.sendMesssage} />
+        <Input sendMessage={this.sendMessage} />
       </div>
     );
   }

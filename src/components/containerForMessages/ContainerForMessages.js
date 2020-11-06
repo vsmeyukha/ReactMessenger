@@ -1,12 +1,13 @@
 import React from 'react';
 import Message from '../Message/Message.js';
 import PropTypes from 'prop-types';
+import './container-for-messages.css';
 
 export default function ContainerForMessages(props) {
   const { messages = [] } = props;
 
   return (
-    <div>
+    <div className="container-for-messages">
       {messages.map((item, key) => <Message text={item.text} user={item.user} key={key} />) }
     </div>
   );
@@ -14,4 +15,4 @@ export default function ContainerForMessages(props) {
 
 ContainerForMessages.propTypes = {
   messages: PropTypes.array
-}
+};

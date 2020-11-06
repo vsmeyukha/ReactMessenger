@@ -1,22 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class SendButton extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default function SendButton(props) {
 
-  render() {
-    return (
-      <button className="send-button" onClick={this.props.handleSubmit}>Отправить</button>
-    );
-  }
+  return (
+    <button className="send-button" onClick={props.handleSubmit} >Отправить</button>
+  );
 
-  handleSubmit() {
-
-  }
 }
 
 SendButton.propTypes = {
-  handleSubmit: PropTypes.function
-}
+  handleSubmit: PropTypes.func
+};
